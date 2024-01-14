@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Taco Bell Items</title>
+    <style>
+        /* Add some basic styling */
+        .product-item {
+            margin: 10px;
+            text-align: center;
+        }
+        .product-item img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Taco Bell Items</h1>
+    <div id="products">
+        {% for item in items %}
+            <div class="product-item">
+                <img src="{{ item.url }}" alt="{{ item.title }}">
+                <h3>{{ item.title }}</h3>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
